@@ -1,5 +1,5 @@
-#include <bits/stdc++.h>
-using namespace std;
+#ifndef USER_H
+#define USER_H
 
 class User {
         private: 
@@ -27,3 +27,4 @@ class User {
                     return this->name;
             }
 };
+#endif

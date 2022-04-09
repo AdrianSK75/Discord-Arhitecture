@@ -1,7 +1,11 @@
 #include <bits/stdc++.h>
-#include "Group.cpp"
-#include "Post.cpp"
-#include "User.cpp"
+#include "./Group/Group.cpp"
+#include "./Group/Room.cpp"
+#include "./Post/Post.cpp"
+#include "./Post/Image.cpp"
+#include "./Post/Text.cpp"
+#include "./Post/Video.cpp"
+#include "./User/User.cpp"
 using namespace std;
 
 int main() {
@@ -33,7 +37,8 @@ int main() {
     groups[0]->addRoom(elrond->getName());
     Post *postText = new Text("Elrond", "Stailer isi creeaza noua colectie de NFTs", 2034, 45, "nfts_collection");
     Post *postVideo = new Video("Elrond", "nfts_presentation.vd", 3000, 400, "nfts_innovation");
-
+    elrond->addPost(elrond->getName(), postText->getFile());
+    elrond->addPost(elrond->getName(), postVideo->getFile());      
 
     for (Group * group : groups) {
             group->getGroup();
